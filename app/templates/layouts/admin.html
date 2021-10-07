@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>UCS Access Control</title>
+        <link rel="icon" type="image/PNG" sizes="16x16" href="{{ url_for('static', filename='admin/img/glotec.PNG') }}">
+		<!-- <link rel="stylesheet" href="static/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='admin/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='admin/css/style.css') }}">
+		<!-- <link rel="stylesheet" href="../../static/admin/css/style.css"> -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+
+        <!-- {% include '.includes/_navbar.html' %} -->
+
+        <div class="container-fluid">
+            {% block body %}
+            {% endblock %}
+        </div>
+
+    </body>
+</html>
