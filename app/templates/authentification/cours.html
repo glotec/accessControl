@@ -1,0 +1,29 @@
+{% extends 'layouts/admin.html' %}
+
+{% block body %}
+
+    <section>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Ajouter un cours</h2>
+                <form action="">
+                    <div class="inputBx">
+                        <span>Cours</span>
+                        <input type="text" name="course">
+                    </div>
+                    <div class="inputBx">
+                        <span>Durée</span>
+                        <input type="text" name="hour">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Enregistrer" name="save">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="{{ url_for('static', filename='admin/img/webcam1.jpg') }}" alt="ucs photo" srcset="">
+        </div>
+    </section>
+
+{% endblock %}

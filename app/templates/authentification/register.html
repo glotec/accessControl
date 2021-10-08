@@ -1,1 +1,49 @@
-Register
+{% extends 'layouts/admin.html' %}
+
+{% block body %}
+
+    <section>
+        <h2>Ajouter un étudiant</h2>
+        <form action="">
+            <div class="contentBx">
+                <div class="formBx">
+                    <div class="inputBx">
+                        <span>Nom complet</span>
+                        <input type="text" name="">
+                    </div>
+                    <div class="inputBx">
+                        <span>Contact</span>
+                        <input type="text" name="">
+                    </div>
+                    <div class="inputBx">
+                        <span>Email</span>
+                        <input type="text" name="">
+                    </div>
+                </div>
+                </div>
+                <div class="contentBx">
+                <div class="formBx">
+                    
+                    <div class="inputBx">
+                        <span>Adresse</span>
+                        <input type="text" name="">
+                    </div>
+                    <div class="inputBx" style="cursor:pointer">
+                        <img src="public/img/icon.jpg" onClick="triggerClick()" style="width:200px; height:200px;" id="profileDisplay">
+                        <!-- <label for="profileImage">Ajouter Image</label> -->
+                        <input type="file" onChange="displayImage(this)" class="form-control" name="profileImage" id="profileImage" 
+                            style="display:none;">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Connexion" name="">
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="imgBx">
+            <img src="{{ url_for('static', filename='admin/img/webcam1.jpg') }}" alt="ucs photo" srcset="">
+        </div>
+    </section>
+
+{% endblock %}

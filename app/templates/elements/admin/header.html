@@ -7,6 +7,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       {% if session.logged_in %}
+      <li class="nav-item active">
+        <a class="nav-link" href="/auth/menu">Accueil </a>
+      </li>
         <li class="nav-item active">
           <a class="nav-link" href="/deconnexion">Déconnexion </a>
         </li>
@@ -15,7 +18,10 @@
           <a class="nav-link" href="/auth/login">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/about">Register </a>
+          <a class="nav-link" href="/auth/register">Register </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/auth/cours">Cours </a>
         </li>
       {% endif %}
       <!-- <li class="nav-item dropdown">

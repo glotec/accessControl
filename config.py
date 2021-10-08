@@ -11,7 +11,7 @@ class DevelopmentConfig(Config):
     Development configurations
     """
 
-    DEBUG = True
+    DEBUG = 1
     SQLALCHEMY_ECHO = True
 
 

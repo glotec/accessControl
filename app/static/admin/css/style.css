@@ -145,6 +145,11 @@ section .contentBx .formBx .inputBx p a{
     color: #ff4584;
 }
 
+section .contentBx .formBx .inputBx .avatar{
+    background-color: #ff4584;
+    border: 1px solid #607d8b;
+}
+
 @media (max-width: 768px){
     section .imgBx {
         position: absolute;
