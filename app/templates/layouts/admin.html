@@ -12,10 +12,13 @@
 	</head>
 	<body>
 
-        <!-- {% include '.includes/_navbar.html' %} -->
+        {% block header %}
+            {% include 'elements/admin/header.html' %}
+        {% endblock %}      
 
         <div class="container-fluid">
             {% block body %}
+            
             {% endblock %}
         </div>
 
