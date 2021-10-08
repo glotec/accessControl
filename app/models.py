@@ -12,8 +12,9 @@ class Admin(db.Model):
     fullname = db.Column(db.String(100))
     username = db.Column(db.String(30))
     password = db.Column(db.String(128))
+    role = db.Column(db.String(12))
     photo = db.Column(db.String(100), default='avatar.jpg')
-    etat = db.Column(db.Boolean)
+    status = db.Column(db.Boolean)
 
 class Year(db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -6,7 +6,8 @@
         <div class="contentBx">
             <div class="formBx">
                 <h2>Créer un compte</h2>
-                <form action="">
+                <form action="" method="post" enctype="multipart/form-data">
+                    {{ form.csrf_token }}
                     <div class="inputBx">
                         <span>Nom complet</span>
                         <input type="text" name="fullname">
