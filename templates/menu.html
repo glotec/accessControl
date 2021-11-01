@@ -1,0 +1,91 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<section>
+    <div class="imgBx">
+        <img src="static/img/img1.jpg" alt="ucs photo" srcset="">
+    </div>
+    <div class="contentBx">
+        <div class="row container">
+            <div class="col-md-12"><h1>Menu</h1></div>
+            <div class="col-md-4 ml-auto">
+                <a href="/dashboard" class="nav-link card text-center bg-info">
+                    <p>Dashboard</p>
+                    <i class="fas fa-chart-line"></i>
+                </a>
+            </div>
+            <div class="col-md-4 m-auto">
+                <a href="/admin" class="nav-link card text-center bg-info">
+                    <p>Utilisateurs</p>
+                    <i class="fas fa-user-plus"></i>
+                </a>
+            </div>
+            <div class="col-md-4 m-auto">
+                <a href="/student" class="nav-link card text-center bg-info">
+                    <p>Etudiant</p>
+                    <i class="fas fa-user-plus"></i>
+                </a>
+            </div>
+<!--            <div class="col-md-4 m-auto">-->
+<!--                <a href="/lecturer" class="nav-link card text-center bg-info">-->
+<!--                    <p>Enseignant</p>-->
+<!--                    <i class="fas fa-user-plus"></i>-->
+<!--                </a>-->
+<!--            </div>-->
+            <div class="col-md-4 m-auto">
+                <a href="/faculty" class="nav-link card text-center bg-info">
+                    <p>Faculte</p>
+                    <i class="fas fa-plus-circle"></i>
+                </a>
+            </div>
+            <div class="col-md-4 m-auto">
+                <a href="/department" class="nav-link card text-center bg-info">
+                    <p>Departement</p>
+                    <i class="fas fa-plus-circle"></i>
+                </a>
+            </div>
+            <div class="col-md-4 m-auto">
+                <a href="/promotion" class="nav-link card text-center bg-info">
+                    <p>Promotion</p>
+                    <i class="fas fa-plus-circle"></i>
+                </a>
+            </div>
+            <div class="col-md-4 m-auto">
+                <a href="/course" class="nav-link card text-center bg-info">
+                    <p>Cours</p>
+                    <i class="fas fa-plus-circle"></i>
+                </a>
+            </div>
+            <div class="col-md-4 m-auto">
+                <a href="/attedance" class="nav-link card text-center bg-info">
+                    <p>Présence</p>
+                    <i class="fas fa-plus-circle"></i>
+                </a>
+            </div>
+            <div class="col-md-4 m-auto">
+                <a href="/fees" class="nav-link card text-center bg-info">
+                    <p>Année</p>
+                    <i class="fas fa-plus-circle"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+        
+        
+        
+        <!-- <div class="inputBx">
+            <p>Ajouter un utilisateur <a href="/admin"><i class="fas fa-user-plus"></i></a></p>
+        </div>
+        
+        <div class="inputBx">
+            <p>Ajouter un étudiant <a href="/student"><i class="fas fa-user-plus"></i></a></p>
+        </div>
+        
+        <div class="inputBx">
+            <p>Ajouter un cours <a href="/course"><i class="fas fa-user-plus"></i></a></p>
+        </div> -->
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+        <section>
+            <div class="contentBx">
+                <!-- <div class="">
+                    <a href="/newaffectation" class="nav-link card text-center bg-info">
+                        <p>Ajouter affectation</p>
+                        <i class="fas fa-plus-circle"></i>
+                    </a>
+                </div> -->
+
+                <h2>Tous les cours</h2>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                          <th scope="col">Id</th>
+                          <th scope="col">Designation</th>
+                          <th scope="col">Heures</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for course in courses %}
+                            <tr>
+                                <th scope="row">{{ course.id }}</th>
+                                <td>{{ course.designation }}</td>
+                                <td>{{ course.duration }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="imgBx">
+                <img src="static/img/affect.jpg" alt="ucs photo" srcset="">
+            </div>
+        </section>
+
+        {% endblock %}

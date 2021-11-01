@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <section>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Créer un compte admin</h2>
+                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>
+                            {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                    {% for message in messages %}
+                                        <div class="alert alert-success">
+                                            <strong>{{ message }}</strong>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                        </p>
+                    </div>
+                </div>
+
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    
+                    <div class="inputBx">
+                        <span>Nom complet</span>
+                        <input type="text" name="fullname">
+                    </div>
+                    <div class="inputBx">
+                        <span>Nom d'utilisateur</span>
+                        <input type="text" name="username">
+                    </div>
+                    <div class="inputBx">
+                        <span>Mot de passe</span>
+                        <input type="password" name="password">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Enregistrer" name="signup">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="{{ url_for('static', filename='img/img1.jpg') }}" alt="ucs photo" srcset="">
+        </div>
+    </section>
+
+{% endblock %}

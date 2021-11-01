@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <section>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Ajouter une promotion</h2>
+                <form action="/promotion" method="post">
+<!--                    <div class="inputBx">-->
+<!--                        <span>Id</span>-->
+<!--                        <input type="text" name="id">-->
+<!--                    </div>-->
+                    <div class="inputBx">
+                        <span>Nom du département</span>
+                        <input type="text" name="promotion">
+                    </div>
+                    <div class="inputBx">
+                        <span>Nom du département</span>
+                        <select name="department" id="">
+                            {% for d in departments %}
+                                <option value={{d.id}}>{{d.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Enregistrer" name="save">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="{{ url_for('static', filename='img/img.jpg') }}" alt="ucs photo" srcset="">
+        </div>
+    </section>
+
+{% endblock %}

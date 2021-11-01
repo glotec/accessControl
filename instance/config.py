@@ -1,1 +1,0 @@
-SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://{user}:{password}@{server}/{database}'.format(user='root', password='', server='127.0.0.1', database='control_access')

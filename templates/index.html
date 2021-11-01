@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+	<div class="login">
+		<h1>Creer</h1>
+		<div class="row">
+			<div class="col-lg-12">
+				<p>
+					{% with messages = get_flashed_messages() %}
+						{% if messages %}
+							{% for message in messages %}
+								<div class="alert alert-success">
+									<strong>{{ message }}</strong>
+								</div>
+							{% endfor %}
+						{% endif %}
+					{% endwith %}
+				</p>
+			</div>
+		</div>
+		<form method="post" action="/upload" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="">Choisir</label>
+				<input type="file" name="files[]" id="fileInput" multiple>
+			</div>
+			<input type="submit" name="submit" class="btn btn-success" value="Upload">
+		</form>
+	</div>
+
+{% endblock %}

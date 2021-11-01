@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-success">
+                                <strong>{{ message }}</strong>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </p>
+        </div>
+    </div>
+
+    <section>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Présence</h2>
+                <form action="/attedance" method="post">
+<!--                    <div class="inputBx">-->
+<!--                        <span>Type présence</span>-->
+<!--                        <input type="text" name="attendancetype" value="{{type}}">-->
+<!--                    </div>-->
+                    <div class="inputBx">
+                        <span>Matricule</span>
+                        <input type="text" name="matricule">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Enregistrer" name="save">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="m-auto">
+            
+            <!-- {% for s in data %} -->
+
+                <!--Begin Video webcam -->
+                <!--Begin Video webcam -->
+
+
+                <h1>Matricule: {{ s.matricule }}</h1>
+                <h2>Noms: {{ s.fullname }}</h2>
+                <h2>{{ s.designation }} {{' '}} {{s.name}}</h2>
+                <img src="static/upload/{{s.picture}}" alt="img" class="ml-auto mr-auto" style="width: 80px;">
+                <!-- <p>genre: {{ s[1] }}</p> -->
+            <!-- {% endfor %} -->
+        </div>
+    </section>
+
+{% endblock %}

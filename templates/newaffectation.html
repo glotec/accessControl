@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <section>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>effectuer une affectation</h2>
+                <form action="/newaffectation" method="post">
+                    <div class="inputBx">
+                        <span>Nom du département</span>
+                        <select name="lecturer_mat" id="">
+                            {% for d in promotions %}
+                                <option value={{d.pid}}>{{d.promo}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>Cours</span>
+                        <select name="course_id" id="">
+                            {% for co in course %}
+                                <option value={{co.id}}>{{co.designation}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Enregistrer" name="save">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="{{ url_for('static', filename='img/new.png') }}" alt="ucs photo" srcset="">
+        </div>
+    </section>
+
+{% endblock %}

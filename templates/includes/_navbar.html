@@ -1,0 +1,98 @@
+<nav class="navbar navbar-expand-lg navbar-default bg-light">
+  <a class="navbar-brand" style="left: 20px !important;"><img src="static/img/logo.png" alt="" style="width: 55px;">UCS Contrôle d'accès</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      {% if session.logged_in %}
+        <li class="nav-item active">
+          <a class="nav-link" href="/menu">Menu </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">Dashboard </a>
+        </li>
+
+<!--        <li class="nav-item dropdown">-->
+<!--          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Enseignant-->
+<!--          </a>-->
+<!--          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+<!--            <li><a class="dropdown-item" href="/lecturer">Ajouter</a></li>-->
+<!--            <li><a class="dropdown-item" href="/affectation">Affecter</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Liste</a></li>-->
+<!--          </ul>-->
+<!--        </li>-->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Etudiant
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/student">Ajouter</a></li>
+<!--            <li><a class="dropdown-item" href="/fees">Paiement</a></li>-->
+            <li><a class="dropdown-item" href="#">Liste</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Presence
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/attendancetype">Ajouter</a></li>
+            <li><a class="dropdown-item" href="#">Liste</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Faculter
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/faculty">Faculté</a></li>
+            <li><a class="dropdown-item" href="/department">Département</a></li>
+            <li><a class="dropdown-item" href="/promotion">Promotion</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Cours
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/course">Ajouter</a></li>
+            <li><a class="dropdown-item" href="/affectation">Affectation</a></li>
+            <li><a class="dropdown-item" href="/courses">Liste</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/admin">Ajouter</a></li>
+            <li><a class="dropdown-item" href="/years">Année</a></li>
+            <li><a class="dropdown-item" href="/account">Mon compte</a></li>
+          </ul>
+        </li>
+
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" href="/admin">Admin </a>-->
+<!--        </li>-->
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Déconnexion </a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="/">Connexion <span class="sr-only">(current)</span></a>
+        </li>
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" href="/admin">Sign Up <span class="sr-only">(current)</span></a>-->
+<!--        </li>-->
+      {% endif %}
+    </ul>
+  </div>
+</nav>
